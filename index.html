@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Anto In Progress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4e8ff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            color: #5d1d69;
+        }
+
+        h1 { font-size: 22px; margin-bottom: 30px; }
+
+        .menu-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border: 4px solid #5d1d69;
+            padding: 10px;
+            text-decoration: none;
+            color: #5d1d69;
+            font-size: 10px;
+        }
+
+        .menu-item:hover {
+            background-color: #5d1d69;
+            color: white;
+        }
+        
+        .content-section {
+            display: none; 
+            width: 80%;
+            max-width: 500px;
+            background: white;
+            border: 4px solid #5d1d69;
+            padding: 20px;
+        }
+
+        .content-section:target {
+            display: block;
+            animation: pixelFade 0.3s;
+        }
+
+        
+        #home { display: block; }
+        #home:has(~ .content-section:target) { display: none; } 
+
+
+        @keyframes pixelFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 { font-size: 14px; color: #5d1d69; border-bottom: 2px solid #5d1d69; }
+    </style>
+</head>
+<body>
+
+    <h1>ANTO IN PROGRESS</h1>
+
+    <div class="menu-container">
+        <a href="#info" class="menu-item">INFO PG</a>
+        <a href="#hobby" class="menu-item">HOBBY</a>
+        <a href="#portfolio" class="menu-item">PORTFOLIO</a>
+        <a href="#contatti" class="menu-item">CONTATTI</a>
+    </div>
+
+    <div id="home" class="content-section">
+        <h2>BENVENUTO</h2>
+        <p>benvenuto nel mio sito! clicca uno dei link nel menù per esplorare il mio mondo!</p>
+    </div>
+
+    <div id="info" class="content-section">
+        <h2>INFO PG</h2>
+        <p>Hey ciao! Io sono Antonio, sono uno studente di informatica appassionato di programmazione e anche molto altro.
+            Ho 16 anni e vado all'istituto tecnico informatico Iti Galileo Ferraris di Napoli. Mi piace molto imparare cose nuove e condividere le mie conoscenze con gli altri.
+        </p>
+    </div>
+
+    <div id="hobby" class="content-section">
+        <h2>HOBBY</h2>
+        <p>I miei hobbi e le mie passioni includono la musica, la programmazione, i vieogiochi, la scrittura, la lettura e tanto altro e dico davvero tanto altro!</p>
+    </div>
+
+  <div id="portfolio" class="content-section">
+        <h2>PROGETTI // SAVE FILES</h2>
+
+        <div class="project-card">
+            <h3 class="project-title">Sito Personale</h3>
+            <p class="project-desc">Questo stesso sito! Costruito interamente da zero per mostrare le mie competenze e le mie passioni.</p>
+            <div class="tech-tags">
+            </div>
+            <a href="#" class="btn-link">REPO GITHUB</a>
+        </div>
+
+    </div>
+
+    <div id="contatti" class="content-section">
+        <h2>CONTATTI</h2>
+        <p>Email: amerolla02@gmail.com</p>
+    </div>
+
+</body>
+</html>
